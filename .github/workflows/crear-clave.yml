@@ -1,0 +1,35 @@
+name: Crear clave de firma
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clave:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Generar la clave
+        run: |
+          PASS=$(openssl rand -hex 16)
+          keytool -genkeypair -keystore kinetrack.jks -alias kinetrack -keyalg RSA -keysize 2048 -validity 10000 -storepass "$PASS" -keypass "$PASS" -dname "CN=Kinetrack"
+          mkdir clave
+          cp kinetrack.jks clave/
+          base64 -w0 kinetrack.jks > clave/KEYSTORE_BASE64.txt
+          echo -n "$PASS" > clave/KEYSTORE_PASSWORD.txt
+          echo -n "kinetrack" > clave/KEY_ALIAS.txt
+          cat > clave/LEEME.txt <<TXT
+          Crea tres secretos en GitHub (Settings > Secrets and variables > Actions > New repository secret):
+            KEYSTORE_BASE64    = contenido de KEYSTORE_BASE64.txt
+            KEYSTORE_PASSWORD  = contenido de KEYSTORE_PASSWORD.txt
+            KEY_ALIAS          = contenido de KEY_ALIAS.txt
+          Guarda esta carpeta en un lugar seguro y borra el artefacto de GitHub después.
+          Si pierdes la clave no podrás actualizar la app en los teléfonos donde ya está instalada.
+          TXT
+      - uses: actions/upload-artifact@v4
+        with:
+          name: clave-de-firma-BORRAR-DESPUES
+          path: clave/
+          retention-days: 1

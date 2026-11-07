@@ -4,7 +4,7 @@ Diagnóstico orientativo, pruebas clínicas y programas de rehabilitación de le
 
 Este repositorio hace dos cosas solo con subirlo a GitHub:
 
-1. **Publica la web** gratis con GitHub Pages: `https://TU-USUARIO.github.io/kinetrack/`. Se puede instalar desde el navegador del móvil.
+1. **Publica la web** gratis con GitHub Pages: `https://adrianvillarroeldelgado-max.github.io/AVD-Kinetrack/`. Se puede instalar desde el navegador del móvil.
 2. **Compila el APK de Android** con GitHub Actions cada vez que cambias algo. El archivo `Kinetrack.apk` aparece en la sección **Releases**.
 
 ---
@@ -37,7 +37,7 @@ La carpeta incluye archivos ocultos (`.github`, `.nojekyll`) que son los que hac
 ### 3. Activa la web (GitHub Pages)
 1. En el repositorio: **Settings → Pages**.
 2. **Source:** Deploy from a branch. **Branch:** `main` y carpeta `/ (root)`. Pulsa **Save**.
-3. En 1–2 minutos la web estará en `https://TU-USUARIO.github.io/kinetrack/`.
+3. En 1–2 minutos la web estará en `https://adrianvillarroeldelgado-max.github.io/AVD-Kinetrack/`.
 
 ### 4. Descarga el APK
 1. Ve a la pestaña **Actions**. Verás el flujo **Generar APK** en marcha (tarda unos 5–10 minutos). Si GitHub pide activar los workflows, pulsa el botón verde.
