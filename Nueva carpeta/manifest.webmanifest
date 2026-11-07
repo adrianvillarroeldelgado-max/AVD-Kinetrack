@@ -1,0 +1,55 @@
+{
+  "name": "Kinetrack · Lesiones deportivas",
+  "short_name": "Kinetrack",
+  "description": "Diagnóstico orientativo, pruebas clínicas y programas de rehabilitación de lesiones deportivas.",
+  "lang": "es",
+  "start_url": "./#diagnostico",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#edf1f4",
+  "theme_color": "#0f2c42",
+  "categories": [
+    "health",
+    "medical",
+    "sports"
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Diagnóstico",
+      "url": "./#diagnostico"
+    },
+    {
+      "name": "Programa",
+      "url": "./#programa"
+    },
+    {
+      "name": "Registrar sesión",
+      "url": "./#seguimiento"
+    }
+  ],
+  "id": "./"
+}

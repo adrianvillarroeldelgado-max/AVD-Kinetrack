@@ -1,0 +1,8 @@
+{
+  "appId": "com.kinetrack.app",
+  "appName": "Kinetrack",
+  "webDir": "www",
+  "plugins": {
+    "LocalNotifications": { "iconColor": "#d62e69" }
+  }
+}

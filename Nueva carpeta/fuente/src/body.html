@@ -1,0 +1,19 @@
+<div class="app">
+  <header class="top"><div class="top-in">
+    <a class="brand" href="#diagnostico" aria-label="Kinetrack inicio">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="10.5" width="24" height="7" rx="3.5" transform="rotate(-38 14 14)" fill="var(--accent)"/><rect x="2" y="10.5" width="24" height="7" rx="3.5" transform="rotate(38 14 14)" fill="currentColor" opacity=".92"/></svg>
+      <span>Kinetrack</span>
+    </a>
+    <div class="top-case">
+      <span id="cloud_chip" class="cloud info">Este dispositivo</span>
+      <label for="case_sel" class="sr">Caso activo</label>
+      <select id="case_sel" data-on="case-sel"></select>
+      <button class="btn-inv" id="install_btn" data-act="install" hidden>Instalar</button>
+    </div>
+  </div></header>
+  <nav class="nav" aria-label="Secciones" id="nav"></nav>
+  <main id="main" tabindex="-1"></main>
+</div>
+<div class="sheet" id="sheet" hidden><div class="sheet-bg" data-act="sheet-close"></div><div class="sheet-panel" role="dialog" aria-modal="true" id="sheet_panel"></div></div>
+<div class="session" id="session" hidden><div class="session-panel" id="session_panel" role="dialog" aria-modal="true" aria-label="Sesión guiada"></div></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
